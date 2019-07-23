@@ -7,17 +7,17 @@ Original file is located at
     https://colab.research.google.com/drive/1dR9jAt79XRdwPVFUf5fFpflwGqpyc2OV
 """
 
-morse = input('Código: ')
+morse = input('Código: ') #entrada
 
-palavras = morse.split(" / ")
+palavras = morse.split(" / ") #separa-se primeiramente as palavras quando surge o espaço / espaço.
 
-caracteres_morse = {'.-': 'A', '-...': 'B', '-.-.': 'C', '-..': 'D', '.': 'E', '..-.': 'F', '--.': 'G', '....': 'H', '..': 'I', '.---': 'J', '-.-': 'K', '.-..': 'L', '--': 'M', '-.': 'N', '---': 'O', '.--.': 'P', '--.-': 'Q', '.-.': 'R', '...': 'S', '-': 'T', '..-': 'U', '...-': 'V', '.--': 'W', '-..-': 'X', '-.--': 'Y', '--..': 'Z'}
+caracteres_morse = {'.-': 'A', '-...': 'B', '-.-.': 'C', '-..': 'D', '.': 'E', '..-.': 'F', '--.': 'G', '....': 'H', '..': 'I', '.---': 'J', '-.-': 'K', '.-..': 'L', '--': 'M', '-.': 'N', '---': 'O', '.--.': 'P', '--.-': 'Q', '.-.': 'R', '...': 'S', '-': 'T', '..-': 'U', '...-': 'V', '.--': 'W', '-..-': 'X', '-.--': 'Y', '--..': 'Z'} #dicionário para traduzir cada código para seu correspondente em LN.
 
 def MorseToLn(palavra):
-  caracteres = palavra.split(" ")
+  caracteres = palavra.split(" ") #separa-se novamente cada código conforme o padrão de separação das letras
   auxiliar = []
   for c in caracteres:
-    auxiliar.append(caracteres_morse[c])
-  return ''.join(auxiliar)
+    auxiliar.append(caracteres_morse[c]) #consulta o dicionário e coloca os carateres em uma lista
+  return ''.join(auxiliar) #juntará as letras e retornará uma string
 for palavra in palavras:
-  print(MorseToLn(palavra), end=' ')
+  print(MorseToLn(palavra), end=' ') #saída
